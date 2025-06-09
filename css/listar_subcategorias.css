@@ -1,0 +1,102 @@
+ 
+    <style> 
+    body { 
+        font-family: 'Arial', sans-serif; /* Define a fonte padrão para o corpo da página. */
+         background:linear-gradient(to right, rgb(253 249 255), rgb(232 214 241));
+    } 
+
+     h2 {
+            /* Padding e margem para o título da página. */
+            padding-left: 153px;
+            margin: 20px 0 20px 117px; /* Margem mais controlada para o título. */
+        }
+
+
+    /* Estiliza a tabela. */
+     table {
+            width: 100%;
+            /* 'border-collapse: separate;' é essencial para que 'border-radius' funcione na tabela. */
+            border-collapse: separate;
+            /* Remove o espaçamento padrão entre as células da tabela. */
+            border-spacing: 0;
+            margin-top: 20px;
+            margin: 20px auto; /* Centraliza a tabela e define margens verticais. */
+            max-width: 800px; /* Define uma largura máxima para a tabela. */
+            border-radius: 10px; /* **APLICA BORDAS ARREDONDADAS À TABELA.** */
+            /* Garante que o conteúdo e o fundo não 'vazem' para fora das bordas arredondadas. */
+            overflow: hidden;
+             background-color:white;
+             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+
+    /* Estiliza os cabeçalhos (th) e as células (td) da tabela. */
+    th, td { 
+        padding: 10px; /* Adiciona preenchimento interno de 10px nas células. */
+        border: 1px solid #ddd; /* Adiciona uma borda fina e cinza às células. */
+        text-align: left; /* Alinha o texto à esquerda. */
+    } 
+    /* Estiliza os cabeçalhos da tabela. */
+    th { 
+        background-color: #9E7FAF; /* Cor de fundo roxa. */
+        color: white; /* Cor do texto branca. */
+    } 
+
+    /* Efeito de hover nas linhas da tabela. */
+    tr:hover { 
+        background-color: #f1f1f1; /* Muda a cor de fundo da linha ao passar o mouse. */
+    } 
+
+    /* Estilo base para botões de ação. */
+    .action-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            text-decoration: none; /* Remove sublinhado dos links. */
+            display: inline-block; /* Permite definir padding e margem. */
+            border-radius: 3px; /* Pequeno arredondamento para os botões de ação. */
+        }
+
+    /* Efeito de hover para botões de ação. */
+    .action-btn:hover { 
+        background-color: #45a049; /* Escurece a cor de fundo no hover. */
+    } 
+
+    /* Estilo específico para o botão de deletar. */
+    .delete-btn { 
+        background-color: #f44336; /* Cor de fundo vermelha. */
+    } 
+
+    /* Efeito de hover para o botão de deletar. */
+    .delete-btn:hover { 
+        background-color: #da190b; /* Escurece a cor de fundo no hover. */
+    } 
+
+    /* Estiliza o contêiner dos botões na parte inferior da página. */
+    .botoes-linha {
+        display: flex; /* Usa flexbox para organizar os botões. */
+        gap: 10px; /* Espaço entre os botões. */
+        margin-top: 20px; /* Margem superior. */
+        justify-content: center; /* Centraliza os botões horizontalmente. */
+        flex-wrap: wrap; /* Permite que os botões quebrem a linha se não houver espaço suficiente. */
+    }
+    /* Estilo para links que atuam como botões. */
+    .botao-link {
+        display: inline-block; /* Permite definir largura/altura e margem. */
+        padding: 10px 20px; /* Preenchimento interno. */
+        margin: 5px 0; /* Margem superior/inferior. */
+        background-color: #9E7FAF; /* Cor de fundo roxa. */
+        color: white; /* Cor do texto branca. */
+        text-decoration: none; /* Remove sublinhado. */
+        border: none; /* Remove borda. */
+        border-radius: 5px; /* Arredonda as bordas. */
+        text-align: center; /* Centraliza o texto. */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável. */
+    }
+
+    /* Efeito de hover para links que atuam como botões. */
+    .botao-link:hover {
+        background-color: #7e5f90; /* Escurece a cor de fundo no hover. */
+    }
+    </style> 
