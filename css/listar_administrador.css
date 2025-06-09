@@ -1,0 +1,95 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Gradiente de fundo suave para o corpo da página. */
+            background: linear-gradient(to right, rgb(253 249 255), rgb(232 214 241));
+        }
+
+        h2 {
+            /* Padding e margem para o título da página. */
+            padding-left: 165px;
+            margin: 20px 0 20px 117px; /* Margem mais controlada para o título. */
+        }
+
+        table {
+            width: 100%;
+            /* 'border-collapse: separate;' é essencial para que 'border-radius' funcione na tabela. */
+            border-collapse: separate;
+            /* Remove o espaçamento padrão entre as células da tabela. */
+            border-spacing: 0;
+            margin-top: 20px;
+            margin: 20px auto; /* Centraliza a tabela e define margens verticais. */
+            max-width: 800px; /* Define uma largura máxima para a tabela. */
+            border-radius: 10px; /* **APLICA BORDAS ARREDONDADAS À TABELA.** */
+            /* Garante que o conteúdo e o fundo não 'vazem' para fora das bordas arredondadas. */
+            overflow: hidden;
+            background-color:white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd; /* Borda fina para as células. */
+            text-align: left; /* Alinhamento do texto à esquerda. */
+        }
+
+        th {
+            background-color: #9E7FAF; /* Cor de fundo para o cabeçalho da tabela. */
+            color: white; /* Cor do texto no cabeçalho. */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Cor de fundo ao passar o mouse sobre as linhas da tabela. */
+        }
+
+        .action-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            text-decoration: none; /* Remove sublinhado dos links. */
+            display: inline-block; /* Permite definir padding e margem. */
+            border-radius: 3px; /* Pequeno arredondamento para os botões de ação. */
+        }
+
+        .action-btn:hover {
+            background-color: #45a049; /* Cor de fundo ao passar o mouse. */
+        }
+
+        .delete-btn {
+            background-color: #f44336; /* Cor específica para o botão de exclusão. */
+        }
+
+        .delete-btn:hover {
+            background-color: #da190b; /* Cor de fundo ao passar o mouse no botão de exclusão. */
+        }
+
+        .botoes-linha {
+            display: flex; /* Usa flexbox para organizar os botões em linha. */
+            gap: 10px; /* Espaçamento entre os botões. */
+            margin-top: 20px;
+            justify-content: center; /* Centraliza os botões horizontalmente. */
+            flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas pequenas. */
+            padding: 0 10px; /* Adiciona um pequeno padding para telas menores, evitando que os botões toquem as bordas. */
+        }
+
+        .botao-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px 0;
+            background-color: #9E7FAF;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px; /* Bordas arredondadas para os botões. */
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transição suave para o efeito hover. */
+        }
+
+        .botao-link:hover {
+            background-color: #7e5f90; /* Cor de fundo ao passar o mouse nos botões. */
+        }
+   
