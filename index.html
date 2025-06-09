@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divina Essência</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+<!--Começa Cabeçalho-->
+<div class="containe-cabecalhoemenu">
+  <header class="Cabecalho">
+    <div class="container-cabecalho">
+      <div class="logo">
+     <a href="index.html">
+    <img src="img/Logo.png" alt="Logo Divina Essência">
+</a>
+      </div>
+      <div class="campodebusca1">
+          <input type="text" placeholder="O que procura?">
+          <button type="button" class="btn-busca">
+            <i class="bi bi-search"></i>
+          </button>
+      </div>
+      <div class="opcoes-usuario">
+          <img src="img/login.png" alt="">
+          <div class="container-login">
+              <h6>Minha Conta</h6>
+              <a href="administrador/login.php">Entrar /</a><a href="cadastrar.html"> Cadastrar</a> 
+          </div>
+          <div class="carrinho">
+              <img src="img/carinho.png" alt="">
+              <span class="quantidade-carrinho">0</span>          
+          </div>
+      </div>
+    </div>
+  </header>
+<!--Fecha cabeçalho-->
+
+<!--Começa Menu-->
+  <div class="menu">
+    <nav class="container-menu">
+        <ul>
+            <li><a href="E-commerce/sobrenos.html">Sobre Nós</a></li>
+            <li><a href="E-commerce/sabonete.html">Sabonetes</a></li>
+            <li><a href="E-commerce/acessorios.html">Acessórios</a></li>
+            <li><a href="E-commerce/vela.html">Vela</a></li>
+            <li><a href="E-commerce/aromatizante.html">Aromatizador</a></li>
+            <li><a href="E-commerce/oleoessencial.html">Oléo essencial</a></li>
+        </ul>
+    </nav>
+  </div>
+</div>
+<!--Fecha menu-->
+
+<!--Começa carrossel-->
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/1.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/3.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+<!--Fecha carrossel-->
+
+<!--Começa destaques-->
+<section class="cards-destaques scroll-reveal">
+  <h1>Destaques</h1>
+  <div class="cards1">
+    <div class="cards-produtos">
+      <div class="produtos">
+        <img src="img/vela-lavanda.png" alt="">
+        <h4>Lavanda</h4>
+        <h4>140g</h4>
+        <h2>R$ 22,00</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="produtos">           
+        <img src="img/essencia-ylanglang.png" alt="">
+        <h4>Ylang Ylang</h4>
+        <h4>10ml</h4>
+        <h2>R$ 53,90</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="produtos">
+        <img src="img/sbnt-aveiamel.png" alt="">
+        <h4>Sabonete Aveia e Mel</h4>
+        <h4>110g</h4>
+        <h2>R$ 30,00</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="produtos">
+        <img src="img/aroma-lavanda.png" alt="">
+        <h4>Lavanda</h4>
+        <h4>250ml</h4>
+        <h2>R$ 40,00</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<!--Fecha destaques-->
+
+<!--Começa mais vendidos-->
+<section class="card-maisventidos scroll-reveal">
+  <h1>Mais Vendidos</h1>
+  <div class="cards1">
+    <div class="cards-produtos">
+      <div class="produtos">
+        <img src="img/sbnt-argilarosalavanda.png" alt="">
+        <h4>Sabonete Argila rosa e Lavanda</h4>
+        <h4>110g</h4>
+        <h2>R$ 27,80</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="produtos">
+        <img src="img/acessorio-buchavegetal.png" alt="">
+        <h4>acessorio-buchavegetal</h4>
+        <p>...</p>
+        <h2>R$ 19,20</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="produtos">
+        <img src="img/aroma-citronela.png" alt="">
+        <h4>Citronela</h4>
+        <h4>250ml</h4>
+        <h2>R$ 32,40</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+      <div class="produtos">
+        <img src="img/vela-bluetansy.png" alt="">
+        <h4>Blue Tansy</h4>
+        <h4>140g</h4>
+        <h2>R$ 23,40</h2>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<!--Fecha mais vendidos-->
+
+<!--Começa depoimentos-->
+<section class="container-dep scroll-reveal">
+  <h1>Depoimentos</h1>
+  <div class="container2">
+    <div class="container-depoimento">
+      <div class="depoimentos-container">
+        <h4>Daniela Santos</h4>
+        <br>
+        <p>"Os sabonetes artesanais são simplesmente maravilhosos! ..."</p>
+      </div>
+      <div class="depoimentos-container">
+        <h4>Sergio Lacerda</h4>
+        <br>
+        <p>"As velas aromáticas transformaram minha casa em um verdadeiro spa! ..."</p>
+      </div>
+      <div class="depoimentos-container">
+        <h4>Adriana Lima</h4>
+        <br>
+        <p>"Nunca imaginei que um aromatizador pudesse fazer tanta diferença! ..."</p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<!--Fecha depoimentos-->
+
+<!--Começa rodapé-->
+<div class="contato">
+  <div class="container-tudo">
+    <div class="containe-email">
+      <div class="email">
+        <div class="container-iconeeescrita">
+          <i class="bi bi-envelope"></i>          
+          <p>Receba nossas Novidades</p>
+        </div>
+        <div class="campodebusca1">
+          <input type="text" placeholder="Digite seu email">
+        </div>
+        <button>Enviar</button>
+      </div>
+    </div>
+    <div class="final-redessociais">
+      <h4>Redes Sociais</h4>
+      <div class="container-redes">
+        <div class="redes">
+          <i class="bi bi-instagram"></i>        
+          <a href="#">@divina_essencia</a>   
+        </div>
+        <div class="redes">
+          <i class="bi bi-facebook"></i> 
+          <a href="#">Divina Essência</a>
+          <link rel="stylesheet" href="#">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Todos Direitos Reservados a Isabella Avelina, Isadora Burgos, Lise Fliess e Pedro Almeida - 2025@</p>
+</footer>
+<!--Fecha rodapé-->
+
+<!--Começa icone fixo de wpp-->
+<div class="whats">
+  <a href="https://wa.me/" target="_blank">
+    <img src="img/wppsemfundo.png"  width="70" alt="whatsapp" title="Fale conosco pelo whatsapp">
+  </a>
+</div>
+<!--Fecha icone fixo de wpp-->
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .scroll-reveal.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
