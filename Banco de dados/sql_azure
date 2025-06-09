@@ -1,0 +1,52 @@
+CREATE DATABASE projeto;
+GO
+USE projeto;
+GO
+
+-- Tabela de administrador
+CREATE TABLE administrador (
+    id_administrador INT IDENTITY(1,1) PRIMARY KEY,
+    adm_nome VARCHAR(100) NOT NULL,
+    adm_email VARCHAR(100) NOT NULL UNIQUE,
+    adm_senha VARCHAR(255) NOT NULL,
+    adm_ativo BIT NOT NULL DEFAULT 1
+);
+
+-- Tabela de fornecedores
+CREATE TABLE fornecedor (
+    id_fornecedor INT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    cnpj VARCHAR(20) NOT NULL UNIQUE,
+    telefone VARCHAR(15),
+    endereco VARCHAR(255),
+    CHECK (LEN(telefone) >= 10)
+);
+
+-- Tabela de categorias
+CREATE TABLE categoria (
+    id_categoria INT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+);
+
+-- Tabela de subcategorias
+CREATE TABLE subcategoria (
+    id_sub INT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    id_categoria INT NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria) ON DELETE CASCADE
+);
+
+-- Tabela de produtos
+CREATE TABLE produto (
+    id_produto INT IDENTITY(1,1) PRIMARY KEY,
+    id_fornecedor INT NOT NULL,
+    nome_produto VARCHAR(100) NOT NULL,
+    id_sub INT NOT NULL,
+    estoque INT NOT NULL CHECK (estoque >= 0),
+    preco DECIMAL(10,2) NOT NULL,
+    descricao VARCHAR(MAX),
+    imagem VARCHAR(255),
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id_fornecedor) ON DELETE CASCADE,
+    FOREIGN KEY (id_sub) REFERENCES subcategoria(id_sub) ON DELETE CASCADE
+);

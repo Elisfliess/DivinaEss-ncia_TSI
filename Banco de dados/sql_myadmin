@@ -1,0 +1,59 @@
+create database 'projeto'
+
+-- Tabela de administardor
+CREATE TABLE administrador (
+    adm_id INT AUTO_INCREMENT PRIMARY KEY,
+    adm_nome VARCHAR(500) NOT NULL,
+    adm_email VARCHAR(500) NOT NULL,
+    adm_senha VARCHAR(100) NOT NULL,
+    adm_ativo TINYINT(1) NOT NULL
+);
+
+
+-- Tabela de administradores
+CREATE TABLE administrador (
+    id_administrador INT AUTO_INCREMENT PRIMARY KEY,
+    adm_nome VARCHAR(100) NOT NULL,
+    adm_email VARCHAR(100) NOT NULL UNIQUE,
+    adm_senha VARCHAR(255) NOT NULL,
+    adm_ativo BOOLEAN NOT NULL DEFAULT 1
+);
+
+-- Tabela de fornecedores
+CREATE TABLE fornecedor (
+    id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    cnpj VARCHAR(20) UNIQUE NOT NULL,
+    telefone VARCHAR(15),
+    endereco VARCHAR(255),
+    CHECK (CHAR_LENGTH(telefone) >= 10)
+);
+
+-- Tabela de categorias
+CREATE TABLE categoria (
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+);
+
+-- Tabela de subcategorias
+CREATE TABLE subcategoria (
+    id_sub INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    id_categoria INT NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria) ON DELETE CASCADE
+);
+
+-- Tabela de produtos
+CREATE TABLE produto (
+    id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    id_fornecedor INT NOT NULL,
+    nome_produto VARCHAR(100) NOT NULL,
+    id_sub INT NOT NULL,
+    estoque INT NOT NULL CHECK (estoque >= 0),
+    preco DECIMAL(10,2) NOT NULL,
+    descricao TEXT,
+    imagem VARCHAR(255),
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id_fornecedor) ON DELETE CASCADE,
+    FOREIGN KEY (id_sub) REFERENCES subcategoria(id_sub) ON DELETE CASCADE
+);

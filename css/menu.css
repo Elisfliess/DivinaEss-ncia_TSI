@@ -1,0 +1,154 @@
+/* Reset básico para a área do menu hamburguer */
+.hamburguer body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+/* Painel do menu hamburguer */
+.hamburguer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #f0d7f1;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+/* Quando ativado */
+.hamburguer.active {
+    transform: translateX(0);
+}
+
+/* Botão do menu */
+.menu-btn {
+    all: unset;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu-btn:hover {
+    background-color: transparent;
+    color: rgb(5, 5, 5);
+}
+
+/* Logo posicionada abaixo do botão */
+.hamburguer .logo {
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* Exibição do menu */
+.hamburguer .nav {
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* Itens da lista principal */
+.hamburguer .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Categoria principal */
+.hamburguer .category {
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Link da categoria */
+.hamburguer .category > a {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+}
+
+/* Submenu escondido por padrão */
+.hamburguer .submenu {
+    background-color: #e0b3ff;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Submenu visível quando a categoria está ativa */
+.hamburguer .category.active .submenu {
+    max-height: 500px; /* Ajustável */
+    opacity: 1;
+}
+
+/* Itens do submenu */
+.hamburguer .submenu li {
+    padding: 10px;
+       background-color: #d6a1fa;
+}
+
+.hamburguer .submenu li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+ 
+}
+
+.hamburguer .submenu li a:hover {
+    color:#9E7FAF
+}
+
+/* Galeria de imagens */
+.hamburguer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 960px;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.hamburguer .image-btn {
+    width: auto;
+    flex-shrink: 0;
+}
+
+.hamburguer .image-btn img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.hamburguer .image-btn img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 960px) {
+    .hamburguer .image-btn {
+        width: calc(50% - 10px);
+    }
+}

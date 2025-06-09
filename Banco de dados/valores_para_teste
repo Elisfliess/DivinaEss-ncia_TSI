@@ -1,0 +1,39 @@
+valores para teste
+-- Usar o banco
+USE projeto;
+
+-- Inserir administradores
+INSERT INTO administrador (adm_nome, adm_email, adm_senha, adm_ativo) VALUES
+('admin teste', 'teste@admin.com', '12345', 1), 
+('teste admin', 'teste@divina.com', '1234', 1), 
+('Isabella Avelina', 'isabella@divina.com', '1234', 1),
+('Isadora Burgos', 'isadora@divina.com', '1234', 1),
+('Lise Fliess', 'lise@divina.com', '1234', 1), 
+('Pedro Almeida', 'pedro@divino.com', '1234', 1);
+
+-- Inserir fornecedores
+INSERT INTO fornecedor (nome, email, cnpj, telefone, endereco) VALUES
+('Flor do Campo', 'flor@campo.com', '12345678000199', '11999999999', 'Rua das Rosas, 100 - SP'),
+('Aroma Puro', 'contato@aromapuro.com', '98765432000188', '11988888888', 'Av. Lavanda, 321 - RJ');
+
+-- Inserir categorias
+INSERT INTO categoria (nome) VALUES
+('Aromaterapia'),
+('Decoração'),
+('Cuidados Pessoais');
+
+-- Inserir subcategorias (relacionadas com categorias)
+INSERT INTO subcategoria (nome, id_categoria) VALUES
+('Velas Aromáticas', 1),
+('Difusores de Ambiente', 1),
+('Sabonetes Naturais', 3),
+('Essências Concentradas', 1),
+('Incensos', 2);
+
+-- Inserir produtos (relacionados com fornecedor e subcategoria)
+INSERT INTO produto (id_fornecedor, nome_produto, id_sub, estoque, preco, descricao, imagem) VALUES
+(1, 'Vela de Lavanda', 1, 50, 29.90, 'Vela feita com cera vegetal e essência de lavanda, ideal para relaxamento.', 'vela_lavanda.jpg'),
+(2, 'Difusor de Laranja Doce', 2, 30, 39.90, 'Difusor com óleo essencial de laranja doce, calmante natural.', 'difusor_laranja.jpg'),
+(1, 'Sabonete de Alecrim', 3, 100, 14.50, 'Sabonete artesanal com óleo de alecrim, estimula a circulação.', 'sabonete_alecrim.jpg'),
+(2, 'Essência de Eucalipto', 4, 20, 19.99, 'Essência concentrada para aromatizadores e difusores.', 'essencia_eucalipto.jpg'),
+(1, 'Incenso de Sândalo', 5, 70, 9.90, 'Incenso natural com aroma amadeirado de sândalo.', 'incenso_sandalo.jpg');

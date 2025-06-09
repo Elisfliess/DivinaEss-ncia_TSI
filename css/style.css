@@ -1,0 +1,830 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Inria Sans', sans-serif; /* Fonte utilizada no projeto */
+    color: #333; /* Cor padrão do texto */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+
+
+/*Icone de WhatsApp*/
+.whats{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.containe-cabecalhoemenu{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* Cabeçalho */
+.Cabecalho {
+    background: #f0d7f1; /* Mantendo um tom pastel claro */
+    border-bottom: 1px solid #e1c2e1; /* Linha inferior suave */
+}
+
+.container-cabecalho {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+
+.campodebusca1 {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    position: relative;
+}
+
+.campodebusca1 input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #e3d0e3;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #4b4b4b;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.campodebusca1 input::placeholder {
+    color: #a9a9a9;
+}
+
+.btn-busca {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #a9a9a9;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-busca:hover {
+    color: #7e6a8d;
+}
+
+.opcoes-usuario {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaçamento entre as opções */
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.container-login h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container-login a {
+    font-size: 12px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.container-login a:hover {
+    text-decoration: underline;
+}
+
+.carrinho {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Ajuste do espaçamento */
+}
+
+.carrinho img {
+    width: 30px;
+    height: 30px;
+}
+
+.quantidade-carrinho {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Menu */
+.menu {
+    border-top: 1px solid #dcbad3;
+    background-color: #fef3f9;
+}
+
+.container-menu {
+    padding: 10px 0;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 120px; /* Aumenta o espaço entre os itens */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5c4a60;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição suave adicionada */
+
+}
+
+.menu a:hover {
+    color: #a575a5;
+    text-decoration: underline;
+    font-weight: 700; /* Negrito aumentado no hover */
+}
+
+/* Rodapé */
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.container-tudo {
+    background: #9E7FAF; /* Fundo roxo claro */
+    width: 100%;
+}
+
+.containe-email {
+    width: 100%;
+    margin: 0;
+    background: #9E7FAF; /* Mesmo fundo que o container principal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.container-iconeeescrita {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email i {
+    font-size: 36px;
+    color: #000000;
+}
+
+.email p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+.campodebusca input {
+    width: 600px; /* Largura do campo */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo cinza claro */
+    font-size: 16px; /* Tamanho do texto */
+    color: #4B4B4B; /* Texto cinza escuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-right: 15px; /* Espaçamento entre o campo e o botão */}
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9E7FAF; /* Fundo roxo claro */
+    padding: 10px 20px; /* Espaçamento interno */
+    width: 100%; /* Ocupa toda a largura do container */
+    max-width: 1200px; /* Limite de largura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+.email button {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #000000; /* Cor do texto roxa clara */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Muda o cursor ao passar */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.email button:hover {
+    background-color: #8F77A7;
+}
+
+.final-redessociais {
+    background: #EADBEA; /* Fundo lilás */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.final-redessociais h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.container-redes {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espaçamento entre os itens das redes sociais */
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.final-redessociais i {
+    font-size: 24px;
+    color: #000000;
+}
+
+.final-redessociais a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.final-redessociais a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+
+/*Destaques e Mais vendidos*/
+.cards1{
+    background: #ffffff
+}
+.cards-destaques h1{
+    font-size: 28px;
+    color: #0a080a; 
+    font-weight: bold;
+    border-bottom: 2px solid #a68dac; /* Linha sob o título */
+    padding-right: 5%;
+    padding-left: 4%;
+    padding-bottom: 1%;
+    text-align: left; /* Alinha o título à esquerda */}
+
+    .cardsvendas h1{
+        font-size: 28px;
+        color: #0a080a; 
+        font-weight: bold;
+        border-bottom: 2px solid #a68dac; /* Linha sob o título */
+        padding-right: 5%;
+        padding-left: 4%;
+        padding-bottom: 1%;
+        text-align: left; /* Alinha o título à esquerda */
+    }
+
+.card-maisventidos h1{
+    font-size: 28px;
+    color: #0a080a; 
+    font-weight: bold;
+    border-bottom: 2px solid #a68dac; /* Linha sob o título */
+    padding-right: 5%;
+    padding-left: 4%;
+    padding-bottom: 1%;
+    text-align: left; /* Alinha o título à esquerda */
+}
+.cards-produtos {
+    padding-top: 1%;
+}
+.cards-produtos{
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os produtos */
+    gap: 20px; /* Espaçamento entre os produtos */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    max-width: 1200px;
+    padding: 10px;
+}
+.produtos {
+    position: relative; /* Necessário para posicionar o botão dentro do produto */
+    max-width: 280px;
+    overflow: hidden;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid transparent; /* Borda invisível inicialmente */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Suaviza o zoom e a borda */
+    padding-bottom: 50px;
+}
+
+.produtos img {
+    max-width: 100%; /* Faz as imagens se ajustarem à largura do container */
+    height: auto;
+}
+
+.btn-comprar {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    background: #a68dac;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1px; 
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.produtos:hover .btn-comprar {
+    opacity: 1;
+    visibility: visible;
+}
+.produtos:hover {
+    transform: scale(1.05); /* Aplica o zoom */
+    border-color: #a68dac; /* Cor da borda ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .cards-produtos {
+        gap: 10px; /* Reduz o espaço entre os produtos */
+    }
+
+    .produtos {
+        max-width: 45%; /* Ocupa metade da largura */
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos {
+        max-width: 100%; /* Cada produto ocupa a largura total */
+    }
+}
+
+/* Layout Responsivo */
+@media (max-width: 1200px) {
+    .container-cabecalho {
+        width: 95%; /* Reduz a largura para ocupar quase toda a tela */
+        padding: 15px;
+    }
+
+    .campodebusca {
+        max-width: 200px; /* Diminui a largura do campo de busca */
+    }
+
+    .opcoes-usuario {
+        gap: 15px; /* Reduz o espaçamento entre os ícones */
+    }
+
+    .menu ul {
+        gap: 40px; /* Reduz o espaçamento entre os itens do menu */
+    }
+}
+
+@media (max-width: 992px) {
+    .container-cabecalho {
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+        justify-content: center; /* Centraliza os elementos */
+    }
+
+    .logo img {
+        max-width: 120px; /* Diminui o tamanho da logo */
+        margin-bottom: 10px;
+    }
+
+    .campodebusca {
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .opcoes-usuario {
+        gap: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    .menu ul {
+        gap: 30px; /* Ajusta o espaçamento entre os itens */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-wrap: wrap; /* Quebra o menu em duas linhas, se necessário */
+        gap: 20px; /* Reduz ainda mais o espaçamento */
+    }
+
+    .menu a {
+        font-size: 14px; /* Reduz o tamanho do texto no menu */
+    }
+
+    .campodebusca {
+        max-width: 200px; /* Reduz o campo de busca */
+    }
+
+    .opcoes-usuario {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .quantidade-carrinho {
+        width: 16px;
+        height: 16px;
+        font-size: 10px; /* Ajusta o número no ícone de carrinho */
+    }
+}
+
+@media (max-width: 576px) {
+    .container-cabecalho {
+        flex-direction: column; /* Organiza os elementos em uma coluna */
+        align-items: center;
+    }
+
+    .campodebusca {
+        max-width: 100%;
+        margin: 10px 0; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .opcoes-usuario {
+        justify-content: center;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Empilha os itens do menu verticalmente */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px; /* Tamanho reduzido para textos */
+    }
+
+    @media (max-width: 768px) {
+    .campodebusca {
+        flex-direction: column; /* Alinha o campo e o botão verticalmente */
+        gap: 10px; /* Reduz o espaçamento */
+    }
+
+    .campodebusca input {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .email button {
+        width: 100%; /* Botão ocupa toda a largura */
+    }
+}
+}
+/*Depoimentos*/
+.container2 {
+    background: #ffffff;
+    padding: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; /* Alinha os itens ao canto esquerdo */
+}
+
+.container-dep h1 {
+    font-size: 28px;
+    color: #0a080a; /* Cor marrom para o título */
+    font-weight: bold;
+    border-bottom: 2px solid #a68dac; /* Linha sob o título */
+    padding-right: 5%;
+    padding-left: 4%;
+    padding-bottom: 1%;
+    text-align: left; /* Alinha o título à esquerda */
+}
+
+
+.container-depoimento {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
+}
+
+.depoimentos-container {
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #cc90d4; /* Borda sutil */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left; /* Alinha o texto à esquerda */
+    flex: 1;
+}
+
+
+
+
+
+/* Login  */
+.login {
+    width: 300px;
+    margin: 100px auto; /* Centraliza a caixa */
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.login h1 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.form-control {
+    background-color: #9E7FAF; /* Fundo roxo */
+    padding: 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda externa */
+    border-radius: 15px; /* Arredondamento */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 8px; /* Espaçamento entre o label e o input */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: #4B234D; /* Cor do texto */
+    text-align: left;
+}
+
+.form-control input {
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço entre inputs */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Arredondamento dos campos */
+    background-color: #E8E3F5; /* Fundo cinza claro */
+}
+
+.form-control p {
+    font-size: 12px; /* Tamanho da fonte */
+    color: #4B234D; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço antes do botão */
+}
+
+.form-control p a {
+    color: #4B234D; /* Mesma cor do texto */
+    text-decoration: underline; /* Sublinhar */
+}
+
+.form-control button {
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px; /* Altura do botão */
+    background-color: #ffffff; /* Cor roxa escura */
+    color: #b17ebb; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 8px; /* Arredondamento */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Muda o cursor ao passar */
+    transition: background-color 0.3s; /* Animação suave */
+}
+
+.form-control button:hover {
+    background-color: #6C4D85; /* Escurece no hover */
+}
+
+
+/*Cadastrar*/
+
+.cadastrar {
+    width: 400px;
+    margin: 50px auto; /* Centraliza o formulário */
+    text-align: center;
+}
+
+.cadastrar h1 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.container-form {
+    background-color: #9E7FAF; /* Fundo lilás bem claro */
+    padding: 20px;
+    border-radius: 15px; /* Arredondamento das bordas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-control2 {
+    text-align: left; /* Alinha o conteúdo à esquerda */
+}
+
+.labeleinput-container{
+    display: flex;
+}
+
+.labeleinput-container label{
+    padding-top: 2%;
+}
+
+.form-control2 label {
+    display: block;
+    margin-bottom: 8px; /* Espaçamento entre label e input */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold;
+    color: #4B234D; /* Roxo escuro */
+}
+
+.form-control2 input[type="text"],
+.form-control2 input[type="email"],
+.form-control2 input[type="password"],
+.form-control2 input[type="date"] {
+    width: 100%; /* Preenche a largura total */
+    padding: 10px;
+    margin-bottom: 15px; /* Espaço entre campos */
+    border: none;
+    border-radius: 8px; /* Arredondamento */
+    background-color: #E8E3F5; /* Fundo cinza claro */
+}
+
+.form-control2 input[type="radio"] {
+    margin-right: 10px;
+}
+
+.container-form p {
+    font-size: 12px;
+    color: #4B234D;
+    margin: 15px 0; /* Espaçamento em cima e embaixo */
+}
+
+.container-form p a {
+    color: #4B234D;
+    text-decoration: underline;
+}
+
+.container-form button {
+    width: 100%; /* Largura total do botão */
+    padding: 10px;
+    background-color: #ffffff; /* Roxo escuro */
+    color: #b17ebb; /* Texto branco */
+    border: none;
+    border-radius: 8px; /* Arredondamento */
+    font-size: 16px;
+    cursor: pointer; /* Aponta a mão no hover */
+    transition: background-color 0.3s;
+}
+
+.container-form button:hover {
+    background-color: #6C4D85; /* Escurece no hover */
+}
+
+
+/* Página sobre nós */
+.container-sobrenos h1 {
+    padding-left: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 30px;
+    color: #333;
+}
+
+.bemvindos h3 {
+    width: 100%;  /* Agora o h3 ocupa 100% da largura */
+    max-width: 1230px; /* Define a largura máxima */
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: white;
+    background: #9E7FAF;
+    border-radius: 10px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 20px;
+}
+
+.imgsobrenos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;  /* Permite que as imagens se ajustem em várias linhas */
+    width: 100%;
+    max-width: 1500px; /* Limita a largura máxima */
+    margin: 0 auto;
+    padding-top: 3%;
+    padding-bottom: 6%;
+}
+
+.imgsobrenos img {
+    width: 100%;  /* A largura é agora 100% */
+    padding-left: 1%;
+    max-width: 412px; /* Mas com um limite de largura */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.txt-sobrenos {
+    width: 100%;  /* Faz com que o texto ocupe 100% da largura */
+    max-width: 765px; /* Limita a largura do texto */
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 23px;
+    color: #555;
+    margin: 0 auto;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.icones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icones img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.icones h6 {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 15px;
+    color: #000000;
+}
+
+.input-group {
+    position: relative;
+    width: 260px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 35px;
+    padding: 8px 40px 8px 10px; /* espaço interno (padding) ajustado para o ícone */
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.input-group .eye {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.input-group .eye:hover {
+    color: #000;
+}
+
