@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Cadastro de Categoria</title>
      <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../css/cadastrar_administrador.css">
+    <link rel="stylesheet" href="../css/cadastrar_categorias.css">
   
 </head>
 <body>
